@@ -1,0 +1,3 @@
+server:
+  context-path: /controle-venda
+  port: 8088

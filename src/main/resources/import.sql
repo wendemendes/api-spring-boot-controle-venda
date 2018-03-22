@@ -1,0 +1,16 @@
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (1, 'Pedross', 'Rua pedro', 'bairro pedro', '99999', '9999988', 'pedro@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (2, 'Mariassss', 'Rua maria', 'bairro maria', '7777', '8888', 'maria@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (3, 'Wende', 'Rua pedro', 'bairro pedro', '99999', '9999988', 'pedro@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (4, 'Tetra', 'Rua maria', 'bairro maria', '7777', '8888', 'maria@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (5, 'Alan', 'Rua pedro', 'bairro pedro', '99999', '9999988', 'pedro@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (6, 'Thiago', 'Rua maria', 'bairro maria', '7777', '8888', 'maria@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (7, 'Catra', 'Rua pedro', 'bairro pedro', '99999', '9999988', 'pedro@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (8, 'teles', 'Rua maria', 'bairro maria', '7777', '8888', 'maria@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (9, 'MAicon', 'Rua pedro', 'bairro pedro', '99999', '9999988', 'pedro@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (10, 'alaaa', 'Rua maria', 'bairro maria', '7777', '8888', 'maria@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (11, 'Ismael', 'Rua pedro', 'bairro pedro', '99999', '9999988', 'pedro@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (12, 'adriano', 'Rua maria', 'bairro maria', '7777', '8888', 'maria@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (13, 'Fabio', 'Rua pedro', 'bairro pedro', '99999', '9999988', 'pedro@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (14, 'Je', 'Rua maria', 'bairro maria', '7777', '8888', 'maria@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (15, 'Castro', 'Rua pedro', 'bairro pedro', '99999', '9999988', 'pedro@gmail.com');
+insert into cliente (cliente_key, nome, endereco, bairro, telefone_Residencial, telefone_Celular, email) values (16, 'Paula', 'Rua maria', 'bairro maria', '7777', '8888', 'maria@gmail.com');
