@@ -28,6 +28,8 @@ public class ClienteService {
 	@Transactional
 	public Cliente alterar(Cliente cliente, ClienteForm clienteForm){
 		
+
+		ValidadorCliente.validarCliente(cliente);
 	
 		cliente.setBairro(clienteForm.getBairro());
 		cliente.setEmail(clienteForm.getEmail());
@@ -40,5 +42,7 @@ public class ClienteService {
 		
 		return cliente;
 	}
+
+	
 
 }

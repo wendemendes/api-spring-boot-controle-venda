@@ -28,6 +28,7 @@ public class ProdutoService {
 	@Transactional
 	public Produto alterar(Produto produto, ProdutoForm produtoForm){
 		
+		ValidadorProduto.validarProduto(produto);
 	
 		produto.setDescricao(produtoForm.getDescricao());
 		produto.setGtin(produtoForm.getGtin());

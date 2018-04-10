@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.controlevenda.produto.business.ProdutoService;
+import com.controlevenda.produto.business.ValidadorProduto;
 import com.controlevenda.produto.model.Produto;
 import com.controlevenda.produto.repository.ProdutoRepository;
 import com.controlevenda.produto.web.form.ProdutoForm;
@@ -25,13 +26,17 @@ import com.controlevenda.produto.web.view.ProdutoView;
 @RestController
 @RequestMapping("/produtos")
 public class ProdutoController {
-	
-	@Autowired
+		
 	private ProdutoRepository produtoRepository;
-	
-	@Autowired
+
 	private ProdutoService produtoService;
 	
+	@Autowired
+	public ProdutoController(ProdutoRepository produtoRepository, ProdutoService produtoService) {
+		this.produtoRepository = produtoRepository;
+		this.produtoService = produtoService;
+	}
+
 	@GetMapping
 	public List<ProdutoView> listar(){
 		
@@ -42,10 +47,7 @@ public class ProdutoController {
 	public ResponseEntity<ProdutoView> obter(@PathVariable Integer produtoKey){
 		
 		Produto produto = produtoRepository.findOne(produtoKey);
-		
-		if (produto == null) {
-			return ResponseEntity.notFound().build();
-		}
+		ValidadorProduto.validarProduto(produto);
 		
 		return ResponseEntity.ok(ProdutoView.toView(Optional.ofNullable(produto))) ;
 	}
@@ -55,10 +57,6 @@ public class ProdutoController {
 		
 		Produto produto = produtoRepository.findOne(produtoKey);
 		
-		if (produto == null) {
-			return ResponseEntity.notFound().build();
-		}
-		
 		produtoService.alterar(produto, produtoForm);
 		
 		return ResponseEntity.ok(ProdutoView.toView(Optional.ofNullable(produto))) ;
@@ -67,7 +65,7 @@ public class ProdutoController {
 	@PostMapping(consumes = "application/json")
 	public ResponseEntity<ProdutoView> salvar(@Valid @RequestBody ProdutoForm produtoForm){
 	
-			return ResponseEntity.ok(ProdutoView.toView(Optional.of(produtoService.salvar(produtoForm)))) ;
+		return ResponseEntity.ok(ProdutoView.toView(Optional.of(produtoService.salvar(produtoForm)))) ;
 
 	}
 	
@@ -75,10 +73,7 @@ public class ProdutoController {
 	public ResponseEntity<Void> excluir(@PathVariable Integer produtoKey){
 		
 		Produto produto = produtoRepository.findOne(produtoKey);
-		
-		if (produto == null) {
-			return ResponseEntity.notFound().build();
-		}
+		ValidadorProduto.validarProduto(produto);
 		
 		produtoRepository.delete(produto);
 		

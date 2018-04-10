@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.controlevenda.cliente.business.ValidadorCliente;
 import com.controlevenda.cliente.model.Cliente;
 
 
@@ -48,6 +49,7 @@ public class ClienteView {
 	}
 	
 	public static ClienteView toView(Optional<Cliente> clienteOptional){
+		
 		return new ClienteView(clienteOptional.get());
 	}
 
